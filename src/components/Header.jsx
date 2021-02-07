@@ -34,7 +34,6 @@ const Header = () => {
         <>
             <Container className={classes.header}>
                 <img src={logo} className={classes.logo}/>
-                
                 <SoundBars />
             </Container>
         </>
