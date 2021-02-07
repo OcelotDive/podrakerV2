@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import {useSelector, useDispatch} from 'react-redux';
 import './App.css';
+import TestConstants from './constants/testConstants';
+import Test from './components/Test';
+import Header from './components/Header';
+import Container from '@material-ui/core/Container';
+import SearchComponet from './components/SearchComponent';
+
+
+
 
 function App() {
+  console.log(TestConstants.TEST)
+  const dispatch = useDispatch();
+  dispatch({type: TestConstants.TEST, response: 233 })
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+    
+      
+      <SearchComponet />
+
     </div>
   );
 }
