@@ -41,15 +41,15 @@ const FeaturedStrip = ({ featuredArray }) => {
     const featuredPodCasts = featuredArray.map((pod, ind) => {
         return(         
             <Card className={classes.featuredPod} variant="outlined">
-            <CardContent>   
-                <Link to={ `/player${ind}`} key={`${pod.title}${ind}`}>
-                    <ReactTooltip />
-                    <div className={classes.featuredPod} data-tip={pod.title}>
-                        <img src={pod.image_url} className={classes.podImage}/>
-                    </div>
-                </Link>
+                <CardContent>   
+                    <Link to={ `/player${ind}`} key={`${pod.title}${ind}`}>
+                        <ReactTooltip />
+                        <div className={classes.featuredPod} data-tip={pod.title}>
+                            <img src={pod.image_url} className={classes.podImage}/>
+                        </div>
+                    </Link>
                 </CardContent>
-                </Card>
+            </Card>
         ) 
     })
 
