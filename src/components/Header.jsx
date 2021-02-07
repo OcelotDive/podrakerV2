@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from '@material-ui/core/Container';
+import { Container, Paper } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import logo from '../images/podraker.png';
 import SoundBars from './SoundBars';
@@ -16,9 +16,6 @@ const useStyles = makeStyles({
         maxWidth: '100%',
         justifyContent: 'center',
         paddingTop: '20px',
-
-
-
     },
     logo: {
         width: '150px',

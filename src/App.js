@@ -1,9 +1,8 @@
 import {useSelector, useDispatch} from 'react-redux';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import TestConstants from './constants/testConstants';
-import Test from './components/Test';
 import Header from './components/Header';
-import Container from '@material-ui/core/Container';
 import SearchComponet from './components/SearchComponent';
 import MainPage from './MainPage';
 
@@ -18,6 +17,7 @@ function App() {
 
 
   return (
+    <BrowserRouter  basename={process.env.PUBLIC_URL}>
     <div className="App">
       <MainPage>
       <Header />
@@ -26,6 +26,7 @@ function App() {
       <SearchComponet />
       </MainPage>
     </div>
+    </BrowserRouter>
   );
 }
 
